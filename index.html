@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Desa Kedungcangkring - Mandiri & Sejahtera</title>
+    
+    <!-- Tailwind CSS for Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=1600');
+            background-size: cover;
+            background-position: center;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+        /* Container untuk membuat iframe responsif */
+        .map-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* Aspect Ratio 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 1rem;
+        }
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center text-white font-bold">K</div>
+                    <span class="text-xl font-bold tracking-tight text-emerald-800">Kedungcangkring</span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#beranda" class="hover:text-emerald-600 transition text-slate-600">Beranda</a>
+                    <a href="#profil" class="hover:text-emerald-600 transition text-slate-600">Profil</a>
+                    <a href="#layanan" class="hover:text-emerald-600 transition text-slate-600">Layanan</a>
+                    <a href="#peta" class="hover:text-emerald-600 transition text-slate-600">Lokasi</a>
+                </div>
+                <button class="bg-emerald-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-emerald-700 transition">
+                    Kontak Desa
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="pt-20">
+        <div class="hero-gradient h-[600px] flex items-center justify-center text-center px-4">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">Selamat Datang di Desa Kedungcangkring</h1>
+                <p class="text-lg text-slate-200 mb-8">Membangun masyarakat yang mandiri, sejahtera, dan menjunjung tinggi nilai gotong royong dalam bingkai kearifan lokal.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#profil" class="bg-emerald-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-600 transition">Jelajahi Desa</a>
+                    <a href="#peta" class="bg-white/10 text-white border border-white/30 backdrop-blur-sm px-8 py-3 rounded-lg font-semibold hover:bg-white/20 transition">Lihat Lokasi</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="max-w-7xl mx-auto px-4 -mt-16 relative z-20">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="glass-card p-6 rounded-2xl shadow-xl text-center border border-slate-100">
+                <div class="text-3xl font-bold text-emerald-600">4.500+</div>
+                <div class="text-slate-500 text-sm">Penduduk</div>
+            </div>
+            <div class="glass-card p-6 rounded-2xl shadow-xl text-center border border-slate-100">
+                <div class="text-3xl font-bold text-emerald-600">12</div>
+                <div class="text-slate-500 text-sm">Rukun Tetangga</div>
+            </div>
+            <div class="glass-card p-6 rounded-2xl shadow-xl text-center border border-slate-100">
+                <div class="text-3xl font-bold text-emerald-600">85%</div>
+                <div class="text-slate-500 text-sm">Area Hijau</div>
+            </div>
+            <div class="glass-card p-6 rounded-2xl shadow-xl text-center border border-slate-100">
+                <div class="text-3xl font-bold text-emerald-600">5</div>
+                <div class="text-slate-500 text-sm">UMKM Unggulan</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Profile -->
+    <section id="profil" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-3xl font-bold text-slate-900 mb-6">Sekilas Tentang Desa Kami</h2>
+                <p class="text-slate-600 leading-relaxed mb-4">
+                    Desa Kedungcangkring merupakan wilayah yang kaya akan potensi alam dan sumber daya manusia. Berlokasi di lokasi strategis, desa kami berkomitmen untuk terus berinovasi dalam memberikan pelayanan publik berbasis digital namun tetap mempertahankan tradisi luhur.
+                </p>
+                <p class="text-slate-600 leading-relaxed mb-6">
+                    Fokus utama kami adalah pengembangan ekonomi kreatif, infrastruktur desa yang memadai, serta kesejahteraan sosial bagi seluruh lapisan masyarakat.
+                </p>
+                <ul class="space-y-3">
+                    <li class="flex items-center text-slate-700">
+                        <svg class="w-5 h-5 text-emerald-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Transparansi Anggaran Desa
+                    </li>
+                    <li class="flex items-center text-slate-700">
+                        <svg class="w-5 h-5 text-emerald-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Pelayanan Administrasi Cepat
+                    </li>
+                    <li class="flex items-center text-slate-700">
+                        <svg class="w-5 h-5 text-emerald-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Pemberdayaan Pemuda & UMKM
+                    </li>
+                </ul>
+            </div>
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1000" class="rounded-3xl shadow-2xl" alt="Pemandangan Desa">
+                <div class="absolute -bottom-6 -left-6 bg-emerald-600 text-white p-6 rounded-2xl hidden md:block">
+                    <p class="italic text-lg">"Maju Bersama, Sejahtera Semua"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="layanan" class="py-24 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Layanan Publik</h2>
+                <p class="text-slate-500 mt-2">Akses layanan administratif tanpa perlu antre panjang</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-200 group">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center text-emerald-600 mb-6 group-hover:bg-emerald-600 group-hover:text-white transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Administrasi</h3>
+                    <p class="text-slate-500 text-sm">Pengurusan KTP, KK, dan Surat Keterangan lainnya secara efisien.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-200 group">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center text-emerald-600 mb-6 group-hover:bg-emerald-600 group-hover:text-white transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Dana Desa</h3>
+                    <p class="text-slate-500 text-sm">Informasi transparan mengenai alokasi dan realisasi anggaran desa.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-200 group">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center text-emerald-600 mb-6 group-hover:bg-emerald-600 group-hover:text-white transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Aspirasi</h3>
+                    <p class="text-slate-500 text-sm">Sampaikan keluhan atau saran untuk kemajuan desa secara langsung.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maps Section -->
+    <section id="peta" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-12">
+            <div class="md:col-span-1">
+                <h2 class="text-3xl font-bold text-slate-900 mb-6">Lokasi Kami</h2>
+                <p class="text-slate-600 mb-8">Kunjungi kantor desa kami untuk mendapatkan pelayanan langsung atau sekadar berkonsultasi mengenai program desa.</p>
+                
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center mr-4 shrink-0 text-emerald-600">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-slate-800">Alamat</p>
+                            <p class="text-sm text-slate-500">Jl. Raya Utama Kedungcangkring No. 12, Jabon, Sidoarjo, Jawa Timur.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center mr-4 shrink-0 text-emerald-600">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-slate-800">Telepon</p>
+                            <p class="text-sm text-slate-500">(031) 123-4567 / +62 812 3456 789</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:col-span-2">
+                <!-- Wrapper Iframe untuk Google Maps -->
+                <div class="shadow-2xl border-4 border-white rounded-2xl overflow-hidden bg-slate-200">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/d/embed?mid=12H6hsl9PAz90OxAer9ZZw9_EImUA3nE&ehbc=2E312F"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center border-t border-slate-800 pt-8">
+            <div class="mb-4 md:mb-0">
+                <span class="text-white font-bold">© 2024 Desa Kedungcangkring.</span> Seluruh Hak Cipta Dilindungi.
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-white transition">Instagram</a>
+                <a href="#" class="hover:text-white transition">Facebook</a>
+                <a href="#" class="hover:text-white transition">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
